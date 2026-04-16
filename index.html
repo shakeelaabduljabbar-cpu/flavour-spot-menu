@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Flavor Spot | Made for your flavor vibe</title>
+    <meta name="description"
+        content="Flavor Spot Menu. Order delicious Zinger Burgers, Loaded Fries, Shawarmas, and more!">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts for Modern Typography -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Flavor Spot Logo" class="logo-icon"
+                style="width: 120px; height: auto; filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.5));">
+            <h1>FLAVOR SPOT</h1>
+            <p class="tagline">"MADE FOR YOUR FLAVOR VIBE."</p>
+        </div>
+    </header>
+
+    <!-- Promotional Banner -->
+    <section class="promo-banner">
+        <h2>✨ POST & SAVE! ✨</h2>
+        <p>Tag us for your next big bite!</p>
+        <div class="discount-box">
+            <h3>INSTANT 10% DISCOUNT!</h3>
+            <p>Post about us on Instagram or TikTok (@FlavorSpotOfficial)</p>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <main class="menu-container">
+
+        <!-- Category: Loaded Fries -->
+        <section class="menu-category">
+            <h2 class="category-title">Loaded Fries</h2>
+            <div class="menu-grid horizontal-scroll">
+                <!-- Item -->
+                <div class="menu-item" onclick="orderItem('Loaded Fries (Small)', 150)">
+                    <div class="item-img-wrapper">
+                        <img src="assets/loaded_fries_1776296832453.png" alt="Loaded Fries" loading="lazy">
+                    </div>
+                    <div class="item-details">
+                        <h3>Loaded Fries <br>(Small)</h3>
+                        <p class="price">Rs. 150</p>
+                    </div>
+                </div>
+                <!-- Item -->
+                <div class="menu-item" onclick="orderItem('Loaded Fries (Large)', 200)">
+                    <div class="item-img-wrapper">
+                        <img src="assets/loaded_fries_1776296832453.png" alt="Loaded Fries" loading="lazy">
+                    </div>
+                    <div class="item-details">
+                        <h3>Loaded Fries <br>(Large)</h3>
+                        <p class="price">Rs. 200</p>
+                    </div>
+                </div>
+                <!-- Item -->
+                <div class="menu-item" onclick="orderItem('Loaded Fries Addon', 50)">
+                    <div class="item-img-wrapper">
+                        <div class="placeholder-img"><i class="fa-solid fa-plus"></i></div>
+                    </div>
+                    <div class="item-details">
+                        <h3>Extra <br>Toppings</h3>
+                        <p class="price">Rs. 50</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category: Burgers & More -->
+        <section class="menu-category">
+            <h2 class="category-title">Burgers & More</h2>
+            <div class="menu-grid horizontal-scroll">
+                <!-- Item -->
+                <div class="menu-item" onclick="orderItem('Zinger Burger & Fries', 450)">
+                    <div class="item-img-wrapper">
+                        <img src="assets/zinger_burger_1776296846856.png" alt="Zinger Burger" loading="lazy">
+                    </div>
+                    <div class="item-details">
+                        <h3>Zinger Burger & Fries</h3>
+                        <p class="price">Rs. 450</p>
+                    </div>
+                </div>
+                <!-- Item -->
+                <div class="menu-item" onclick="orderItem('Egg Burger', 250)">
+                    <div class="item-img-wrapper">
+                        <img src="egg burger.jpg" alt="Egg Burger" loading="lazy">
+                    </div>
+                    <div class="item-details">
+                        <h3>Egg <br>Burger</h3>
+                        <p class="price">Rs. 250</p>
+                    </div>
+                </div>
+                <!-- Item -->
+                <div class="menu-item" onclick="orderItem('Chicken Chowmein', 400)">
+                    <div class="item-img-wrapper">
+                        <img src="assets/chicken_chowmein_1776296860804.png" alt="Chowmein" loading="lazy">
+                    </div>
+                    <div class="item-details">
+                        <h3>Chicken <br>Chowmein</h3>
+                        <p class="price">Rs. 400</p>
+                    </div>
+                </div>
+                <!-- Item -->
+                <div class="menu-item" onclick="orderItem('Dumplings (6 Pieces)', 450)">
+                    <div class="item-img-wrapper">
+                        <img src="dumpling.webp" alt="Dumpling" loading="lazy">
+                    </div>
+                    <div class="item-details">
+                        <h3>Dumpling <br>(6 Piece)</h3>
+                        <p class="price">Rs. 450</p>
+                    </div>
+                </div>
+                <!-- Item -->
+                <div class="menu-item" onclick="orderItem('Fried Rice', 350)">
+                    <div class="item-img-wrapper">
+                        <img src="fried rice.jpg" alt="Fried Rice" loading="lazy">
+                    </div>
+                    <div class="item-details">
+                        <h3>Fried <br>Rice</h3>
+                        <p class="price">Rs. 350</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category: Shawarma -->
+        <section class="menu-category">
+            <h2 class="category-title">Shawarmas & Wraps</h2>
+            <div class="menu-grid horizontal-scroll">
+                <div class="menu-item" onclick="orderItem('Chicken Shawarma', 280)">
+                    <div class="item-img-wrapper">
+                        <img src="assets/chicken_shawarma_1776296874381.png" alt="Chicken Shawarma" loading="lazy">
+                    </div>
+                    <div class="item-details">
+                        <h3>Chicken <br>Shawarma</h3>
+                        <p class="price">Rs. 280</p>
+                    </div>
+                </div>
+                <div class="menu-item" onclick="orderItem('Zinger Shawarma', 400)">
+                    <div class="item-img-wrapper">
+                        <img src="zinger showrma.jpg" alt="Zinger Shawarma" loading="lazy">
+                    </div>
+                    <div class="item-details">
+                        <h3>Zinger <br>Shawarma</h3>
+                        <p class="price">Rs. 400</p>
+                    </div>
+                </div>
+                <div class="menu-item" onclick="orderItem('Arabic Wrap', 400)">
+                    <div class="item-img-wrapper">
+                        <img src="arabic roll.jpg" alt="Arabic Wrap" loading="lazy">
+                    </div>
+                    <div class="item-details">
+                        <h3>Arabic Wrap 🌯</h3>
+                        <p class="price">Rs. 400</p>
+                    </div>
+                </div>
+                <div class="menu-item" onclick="orderItem('Roll Paratha', 250)">
+                    <div class="item-img-wrapper">
+                        <img src="assets/roll_paratha_1776298355954.png" alt="Roll Paratha" loading="lazy">
+                    </div>
+                    <div class="item-details">
+                        <h3>Roll <br>Paratha</h3>
+                        <p class="price">Rs. 250</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category: Deals -->
+        <section class="menu-category deals-section">
+            <h2 class="category-title deals-title">Exclusive Deals</h2>
+            <div class="deals-grid">
+                <!-- Deal 1 -->
+                <div class="deal-card" onclick="orderItem('Burger Deal', 999)">
+                    <div class="deal-info">
+                        <h3>Burger Deal</h3>
+                        <p class="deal-desc">2 Zinger Burgers + Fries + Cold Drink</p>
+                        <p class="price">Rs. 999</p>
+                    </div>
+                    <div class="deal-images">
+                        <div class="deal-circle z-3"><img src="2zingerburger.png" alt="Burger"></div>
+                        <div class="deal-circle z-2"><img src="fries.jpg" alt="Fries"></div>
+                        <div class="deal-circle z-1"><img
+                                src="https://images.pexels.com/photos/50593/coca-cola-cold-drink-soft-drink-coke-50593.jpeg?auto=compress&cs=tinysrgb&w=300"
+                                alt="Drink"></div>
+                    </div>
+                </div>
+                <!-- Deal 2 -->
+                <div class="deal-card" onclick="orderItem('Shawarma Deal', 650)">
+                    <div class="deal-info">
+                        <h3>Shawarma Deal</h3>
+                        <p class="deal-desc">2 Shawarmas + Fries + Cold Drink</p>
+                        <p class="price">Rs. 650</p>
+                    </div>
+                    <div class="deal-images">
+                        <div class="deal-circle z-3"><img src="zinger showrma.jpg" alt="Shawarma"></div>
+                        <div class="deal-circle z-2"><img src="fries.jpg" alt="Fries"></div>
+                        <div class="deal-circle z-1"><img
+                                src="https://images.pexels.com/photos/50593/coca-cola-cold-drink-soft-drink-coke-50593.jpeg?auto=compress&cs=tinysrgb&w=300"
+                                alt="Drink"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Extras -->
+        <section class="menu-category" style="text-align: center; margin-bottom: 50px;">
+            <div class="extra-item" onclick="orderItem('Cup of Tea', 80)">
+                <i class="fa-solid fa-mug-hot"></i> Cup of Tea : <strong>Rs. 80</strong>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Location -->
+    <footer class="footer">
+        <p><i class="fa-solid fa-location-dot"></i> <strong>Location:</strong> 18 Markz, NUML University - Iqra
+            University - Islamic University - Fast Univ.</p>
+        <p><i class="fa-solid fa-phone"></i> <strong>Call Us:</strong> 03350968410</p>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/923350968410?text=Hi%20Flavor%20Spot!%20I'd%20like%20to%20place%20an%20order."
+        class="whatsapp-btn" id="wa-btn" target="_blank">
+        <div class="wa-icon">
+            <i class="fa-brands fa-whatsapp"></i>
+        </div>
+        <span class="wa-text">Order Now</span>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
