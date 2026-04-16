@@ -358,17 +358,89 @@ h1, h2, h3 {
     animation: pulse 2s infinite;
 }
 
-/* Responsive constraints */
+/* Custom Animations for JavaScript */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.7s cubic-bezier(0.165, 0.84, 0.44, 1), transform 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+    will-change: opacity, transform;
+}
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Constraints & Breakpoints */
+
+/* Extra Small Phones */
+@media (max-width: 400px) {
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr); /* Drop to 2 col for tiny screens */
+    }
+    .deal-images { display: none; } /* Hide heavy deal images on tiny screens */
+}
+
+/* Tablets & Small Desktops */
 @media (min-width: 600px) {
     .menu-container {
-        max-width: 800px;
+        max-width: 900px;
         margin: 0 auto;
     }
     .menu-grid {
         grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
     }
     .promo-banner {
-        max-width: 600px;
-        margin: 1rem auto;
+        max-width: 700px;
+        margin: 2rem auto;
+        padding: 2.5rem;
+    }
+    .deals-grid {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+    .deal-card {
+        flex: 1;
+    }
+    .item-details h3 {
+        font-size: 0.9rem;
+    }
+    .item-details .price {
+        font-size: 1rem;
+    }
+}
+
+/* Large Desktops & Widescreens */
+@media (min-width: 1024px) {
+    .menu-container {
+        max-width: 1200px;
+        padding: 0 2rem;
+    }
+    .menu-grid {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 25px;
+    }
+    .menu-item {
+        padding: 15px;
+        border-width: 2px;
+    }
+    .item-details h3 {
+        font-size: 1.1rem;
+        min-height: 40px;
+    }
+    .item-details .price {
+        font-size: 1.2rem;
+    }
+    .promo-banner {
+        max-width: 900px;
+        padding: 3rem;
+    }
+    .header h1 {
+        font-size: 3rem;
+    }
+    .tagline {
+        font-size: 1.2rem;
     }
 }

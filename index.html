@@ -2,9 +2,15 @@
 <html lang="en">
 
 <head>
+    <!-- Fast Load Scripts -->
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="preload" href="logo.png" as="image">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Flavor Spot | Made for your flavor vibe</title>
+    <!-- Favicon -->
+    <link rel="icon" href="logo.png" type="image/png">
     <meta name="description"
         content="Flavor Spot Menu. Order delicious Zinger Burgers, Loaded Fries, Shawarmas, and more!">
     <link rel="stylesheet" href="style.css">
@@ -24,19 +30,32 @@
     <header class="header">
         <div class="logo">
             <img src="logo.png" alt="Flavor Spot Logo" class="logo-icon"
-                style="width: 120px; height: auto; filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.5));">
+                style="width: 220px; height: auto; filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.5));">
             <h1>FLAVOR SPOT</h1>
             <p class="tagline">"MADE FOR YOUR FLAVOR VIBE."</p>
         </div>
     </header>
 
-    <!-- Promotional Banner -->
+    <!-- Promotional Banner / Golden Ticket -->
     <section class="promo-banner">
         <h2>✨ POST & SAVE! ✨</h2>
-        <p>Tag us for your next big bite!</p>
+        <p>TAG US FOR YOUR NEXT BIG BITE!</p>
+
+        <div class="promo-details"
+            style="margin: 15px auto; font-size: 1.1em; line-height: 1.5; max-width: 600px; text-align: left; background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px;">
+            <div style="text-align: center; margin-bottom: 10px; font-weight: bold; font-size: 1.2em; color: #f9d342;">
+                <i class="fa-solid fa-camera-retro"></i> SHARE THE VIBE, GET A BITE!
+            </div>
+            1. Order any flavor-packed item!<br>
+            2. Snap or record your food. <i class="fa-solid fa-camera"></i><br>
+            3. Mention us in your post/story.<br>
+            4. Tag our *new* combined social accounts: <strong>@FlavorSpotOfficial</strong> <br>
+            <span style="display: block; text-align: center; margin-top: 5px;">(on both Insta & TikTok)!</span>
+        </div>
+
         <div class="discount-box">
-            <!-- <h3>INSTANT 10% DISCOUNT!</h3> -->
-            <p>Post about us on Instagram or TikTok (@FlavorSpotOfficial)</p>
+            <h3>INSTANT 10% DISCOUNT!</h3>
+            <p>Post about us on your Instagram or TikTok & ALL Items! (Both Dine-in & Takeaway!)</p>
         </div>
     </section>
 
@@ -50,21 +69,21 @@
                 <!-- Item -->
                 <div class="menu-item" onclick="orderItem('Loaded Fries (Small)', 150)">
                     <div class="item-img-wrapper">
-                        <img src="assets/loaded_fries_1776296832453.png" alt="Loaded Fries" loading="lazy">
+                        <img src="fries.png" alt="Loaded Fries" loading="eager">
                     </div>
                     <div class="item-details">
-                        <h3>Loaded Fries <br>(Small)</h3>
-                        <p class="price">Rs. 150</p>
+                        <h3>Fries <br>(Small/Large)</h3>
+                        <p class="price">Rs. 150/200</p>
                     </div>
                 </div>
                 <!-- Item -->
                 <div class="menu-item" onclick="orderItem('Loaded Fries (Large)', 200)">
                     <div class="item-img-wrapper">
-                        <img src="assets/loaded_fries_1776296832453.png" alt="Loaded Fries" loading="lazy">
+                        <img src="loaded.png" alt="Loaded Fries" loading="eager">
                     </div>
                     <div class="item-details">
                         <h3>Loaded Fries <br>(Large)</h3>
-                        <p class="price">Rs. 200</p>
+                        <p class="price">Rs. 450</p>
                     </div>
                 </div>
                 <!-- Item -->
@@ -87,7 +106,7 @@
                 <!-- Item -->
                 <div class="menu-item" onclick="orderItem('Zinger Burger & Fries', 450)">
                     <div class="item-img-wrapper">
-                        <img src="assets/zinger_burger_1776296846856.png" alt="Zinger Burger" loading="lazy">
+                        <img src="assets/zinger_burger_1776296846856.png" alt="Zinger Burger" loading="eager">
                     </div>
                     <div class="item-details">
                         <h3>Zinger Burger & Fries</h3>
@@ -97,7 +116,7 @@
                 <!-- Item -->
                 <div class="menu-item" onclick="orderItem('Egg Burger', 250)">
                     <div class="item-img-wrapper">
-                        <img src="egg burger.JPG" alt="Egg Burger" loading="lazy">
+                        <img src="egg burger.JPG" alt="Egg Burger" loading="eager">
                     </div>
                     <div class="item-details">
                         <h3>Egg <br>Burger</h3>
@@ -107,7 +126,7 @@
                 <!-- Item -->
                 <div class="menu-item" onclick="orderItem('Chicken Chowmein', 400)">
                     <div class="item-img-wrapper">
-                        <img src="assets/chicken_chowmein_1776296860804.png" alt="Chowmein" loading="lazy">
+                        <img src="assets/chicken_chowmein_1776296860804.png" alt="Chowmein" loading="eager">
                     </div>
                     <div class="item-details">
                         <h3>Chicken <br>Chowmein</h3>
@@ -117,7 +136,7 @@
                 <!-- Item -->
                 <div class="menu-item" onclick="orderItem('Dumplings (6 Pieces)', 450)">
                     <div class="item-img-wrapper">
-                        <img src="dumpling.webp" alt="Dumpling" loading="lazy">
+                        <img src="dumpling.webp" alt="Dumpling" loading="eager">
                     </div>
                     <div class="item-details">
                         <h3>Dumpling <br>(6 Piece)</h3>
@@ -127,11 +146,51 @@
                 <!-- Item -->
                 <div class="menu-item" onclick="orderItem('Fried Rice', 350)">
                     <div class="item-img-wrapper">
-                        <img src="fried rice.jpg" alt="Fried Rice" loading="lazy">
+                        <img src="fried rice.jpg" alt="Fried Rice" loading="eager">
                     </div>
                     <div class="item-details">
                         <h3>Fried <br>Rice</h3>
                         <p class="price">Rs. 350</p>
+                    </div>
+                </div>
+                <!-- Item -->
+                <div class="menu-item" onclick="orderItem('Biryani', 300)">
+                    <div class="item-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1633945274405-b6c8069047b0?auto=format&fit=crop&w=300&q=80"
+                            alt="Biryani" loading="eager">
+                    </div>
+                    <div class="item-details">
+                        <h3>Biryani</h3>
+                        <p class="price">Rs. 300</p>
+                    </div>
+                </div>
+                <!-- Item -->
+                <div class="menu-item" onclick="orderItem('Pulao Kabab', 300)">
+                    <div class="item-img-wrapper">
+                        <img src="polao kabab.png" alt="Pulao Kabab" loading="eager">
+                    </div>
+                    <div class="item-details">
+                        <h3>Pulao <br>Kabab</h3>
+                        <p class="price">Rs. 300</p>
+                    </div>
+                </div>
+                <!-- Item -->
+                <div class="menu-item" onclick="orderItem('Chicken Pulao', 450)">
+                    <div class="item-img-wrapper">
+                        <img src="chicken polao.png" alt="Chicken Pulao" loading="eager">
+                    </div>
+                    <div class="item-details">
+                        <h3>Chicken <br>Pulao</h3>
+                        <p class="price">Rs. 450</p>
+                    </div>
+                </div>
+                <div class="menu-item" onclick="orderItem('Chicken Pulao', 450)">
+                    <div class="item-img-wrapper">
+                        <img src="buldak noodles.png" alt="Chicken Pulao" loading="eager">
+                    </div>
+                    <div class="item-details">
+                        <h3>buldak <br>noodles </h3>
+                        <p class="price">Rs. 999</p>
                     </div>
                 </div>
             </div>
@@ -143,7 +202,7 @@
             <div class="menu-grid horizontal-scroll">
                 <div class="menu-item" onclick="orderItem('Chicken Shawarma', 280)">
                     <div class="item-img-wrapper">
-                        <img src="assets/chicken_shawarma_1776296874381.png" alt="Chicken Shawarma" loading="lazy">
+                        <img src="assets/chicken_shawarma_1776296874381.png" alt="Chicken Shawarma" loading="eager">
                     </div>
                     <div class="item-details">
                         <h3>Chicken <br>Shawarma</h3>
@@ -152,7 +211,7 @@
                 </div>
                 <div class="menu-item" onclick="orderItem('Zinger Shawarma', 400)">
                     <div class="item-img-wrapper">
-                        <img src="zinger showrma.jpg" alt="Zinger Shawarma" loading="lazy">
+                        <img src="zinger showrma.jpg" alt="Zinger Shawarma" loading="eager">
                     </div>
                     <div class="item-details">
                         <h3>Zinger <br>Shawarma</h3>
@@ -161,20 +220,81 @@
                 </div>
                 <div class="menu-item" onclick="orderItem('Arabic Wrap', 400)">
                     <div class="item-img-wrapper">
-                        <img src="arabic roll.jpg" alt="Arabic Wrap" loading="lazy">
+                        <img src="arabic roll.jpg" alt="Arabic Wrap" loading="eager">
                     </div>
                     <div class="item-details">
                         <h3>Arabic Wrap 🌯</h3>
-                        <p class="price">Rs. 400</p>
+                        <p class="price">Rs. 450</p>
                     </div>
                 </div>
-                <div class="menu-item" onclick="orderItem('Roll Paratha', 250)">
+                <div class="menu-item" onclick="orderItem('Roll Paratha', 380)">
                     <div class="item-img-wrapper">
-                        <img src="assets/roll_paratha_1776298355954.png" alt="Roll Paratha" loading="lazy">
+                        <img src="assets/roll_paratha_1776298355954.png" alt="Roll Paratha" loading="eager">
                     </div>
                     <div class="item-details">
                         <h3>Roll <br>Paratha</h3>
-                        <p class="price">Rs. 250</p>
+                        <p class="price">Rs. 380</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category: Beverages -->
+        <section class="menu-category">
+            <h2 class="category-title">Drinks & Beverages</h2>
+            <div class="menu-grid horizontal-scroll">
+                <div class="menu-item" onclick="orderItem('Coca-Cola (1 Liter)')">
+                    <div class="item-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=300&q=80"
+                            alt="Coca Cola" loading="eager">
+                    </div>
+                    <div class="item-details">
+                        <h3>Coca-Cola</h3>
+                    </div>
+                </div>
+                <div class="menu-item" onclick="orderItem('Pepsi (1 Liter)')">
+                    <div class="item-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&w=300&q=80"
+                            alt="Pepsi" loading="eager">
+                    </div>
+                    <div class="item-details">
+                        <h3>Pepsi</h3>
+                    </div>
+                </div>
+                <div class="menu-item" onclick="orderItem('7Up (1 Liter)')">
+                    <div class="item-img-wrapper">
+                        <img src="7up.png" alt="7Up" loading="eager">
+                    </div>
+                    <div class="item-details">
+                        <h3>7Up </h3>
+                    </div>
+                </div>
+                <div class="menu-item" onclick="orderItem('Lemon Soda', 150)">
+                    <div class="item-img-wrapper">
+                        <img src="lemon soda.jpg" alt="Lemon Soda" loading="eager">
+                    </div>
+                    <div class="item-details">
+                        <h3>Lemon <br>Soda</h3>
+                        <p class="price">Rs. 150</p>
+                    </div>
+                </div>
+                <div class="menu-item" onclick="orderItem('Mint Margarita', 200)">
+                    <div class="item-img-wrapper">
+                        <img src="Mint.png" alt="Mint Margarita" loading="eager">
+                    </div>
+                    <div class="item-details">
+                        <h3>Mint <br>Margarita</h3>
+                        <p class="price">Rs. 200</p>
+                    </div>
+                </div>
+                <!-- Tea moved from Extras -->
+                <div class="menu-item" onclick="orderItem('Cup of Tea', 80)">
+                    <div class="item-img-wrapper">
+                        <img src="tea cup.jpg" alt="Cup of Tea" loading="eager">
+                    </div>
+                    <div class="item-details">
+                        <h3>Cup of <br>Tea</h3>
+                        <p class="price">Rs. 80</p>
                     </div>
                 </div>
             </div>
@@ -189,7 +309,7 @@
                     <div class="deal-info">
                         <h3>Burger Deal</h3>
                         <p class="deal-desc">2 Zinger Burgers + Fries + Cold Drink</p>
-                        <p class="price">Rs. 999</p>
+                        <p class="price">Rs. 1099</p>
                     </div>
                     <div class="deal-images">
                         <div class="deal-circle z-3"><img src="2zingerburger.png" alt="Burger"></div>
@@ -217,20 +337,44 @@
             </div>
         </section>
 
-        <!-- Extras -->
-        <section class="menu-category" style="text-align: center; margin-bottom: 50px;">
-            <div class="extra-item" onclick="orderItem('Cup of Tea', 80)">
-                <i class="fa-solid fa-mug-hot"></i> Cup of Tea : <strong>Rs. 80</strong>
-            </div>
-        </section>
-
     </main>
 
     <!-- Footer Location -->
-    <footer class="footer">
-        <p><i class="fa-solid fa-location-dot"></i> <strong>Location:</strong> 18 Markz, NUML University - Iqra
+    <footer class="footer" style="text-align: center; padding-bottom: 30px;">
+        <p style="font-size: 1.1em; margin-bottom: 15px;"><i class="fa-solid fa-location-dot"
+                style="color: #d4af37;"></i> <strong>Location:</strong> 18 Markz, NUML University - Iqra
             University - Islamic University - Fast Univ.</p>
-        <p><i class="fa-solid fa-phone"></i> <strong>Call Us:</strong> 03350968410</p>
+
+        <!-- Big Bold White Call Us -->
+        <p style="font-size: 1.3em; margin-top: 10px;">
+            <i class="fa-solid fa-phone" style="color: #d4af37; font-size: 1.2em;"></i>
+            <strong style="font-weight: 900; letter-spacing: 1px;">CALL US:</strong>
+            <strong style="font-size: 1.5em; color: #fff; font-weight: 900;">03350968410</strong>
+        </p>
+
+        <!-- Attractive Social Media Icons -->
+        <div class="social-links" style="margin-top: 25px; display: flex; justify-content: center; gap: 20px;">
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/flavourspot2026?igsh=MXZsb2llMG1ibzlsdA==" target="_blank" style="
+                display: flex; align-items: center; justify-content: center;
+                width: 50px; height: 50px; border-radius: 50%;
+                background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+                color: #fff; font-size: 26px; text-decoration: none;
+                box-shadow: 0 4px 15px rgba(220, 39, 67, 0.4); transition: transform 0.3s;
+            " onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <!-- TikTok -->
+            <a href="https://www.tiktok.com/@flavourspot1?_r=1&_t=ZS-95akycC1SyN" target="_blank" style="
+                display: flex; align-items: center; justify-content: center;
+                width: 50px; height: 50px; border-radius: 50%;
+                background: #000; color: #fff; font-size: 24px; text-decoration: none;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5), inset 2px 2px 0px rgba(0, 255, 255, 0.8), inset -2px -2px 0px rgba(255, 0, 80, 0.8); transition: transform 0.3s;
+            " onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
+        </div>
     </footer>
 
     <!-- Floating WhatsApp Button -->
